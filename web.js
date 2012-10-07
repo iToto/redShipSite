@@ -3,8 +3,8 @@
  * Module dependencies.
  */
 
-var express = require('express')
-  , routes = require('./routes');
+var express = require('express');
+var routes  = require('./routes');
 
 var app = module.exports = express.createServer();
 
@@ -32,8 +32,10 @@ app.configure('production', function(){
 
 // Now less files with @import 'whatever.less' will work(https://github.com/senchalabs/connect/pull/174)
 var TWITTER_BOOTSTRAP_PATH = './vendor/twitter/bootstrap/less';
-express.compiler.compilers.less.compile = function(str, fn){
-  try {
+express.compiler.compilers.less.compile = function(str, fn)
+{
+  try
+  {
     var less = require('less');var parser = new less.Parser({paths: [TWITTER_BOOTSTRAP_PATH]});
     parser.parse(str, function(err, root){fn(err, root.toCSS());});
   } catch (err) {fn(err);}
