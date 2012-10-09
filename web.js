@@ -44,6 +44,8 @@ express.compiler.compilers.less.compile = function(str, fn)
 // Routes
 
 app.get('/', routes.index);
+app.get('/index', routes.index);
+app.get('/about', routes.about);
 
 var port = process.env.PORT || 5000;
 
