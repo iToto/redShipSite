@@ -8,7 +8,13 @@ exports.index = function(req, res){
     res.render('index', { title: 'Red Ship Studios' });
 };
 
-exports.about = function(req,res){
-    console.log('About Requested');
-    res.render('about',{ title: 'Red Ship Studios - About'});
+exports.games = function(req,res){
+    console.log('Games Requested');
+    res.render('games',{ title: 'Red Ship Studios - Our Games'});
 };
+
+exports.contact = function(req,res){
+    console.log('Contact Requested');
+    res.render('contact',{ title: 'Red Ship Studios - Contact Us'});
+};
+
