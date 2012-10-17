@@ -5749,6 +5749,13 @@ a.badge:hover {
   color: inherit;
 }
 
+.hero-unit p.description {
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 16px;
+  color: inherit;
+}
+
 .pull-right {
   float: right;
 }
